@@ -7,14 +7,14 @@ Prefixer for Myanmar National Registration Card's Format
 
 `[State Number]\[District]([NAING/N])[Register No]`
 
-- `12/OKM(N)123456`
-- `12/OUKAMA(N)123456`
-- `12/OKM(NAING)123456`
+- `12/MYK(N)167887`
+- `12/MAYAKA(N)167887`
+- `12/MYK(NAING)167887`
 
 Prefer formats
-- `12/OUKAMA(N)123456`
-- `12/OUKAMA(NAING)123456`
-- `၁၂/ဥကမ(နိုင်)၁၂၃၄၅၆`
+- `12/MAYAKA(N)167887`
+- `12/MAYAKA(NAING)167887`
+- `၁၂/မရက(နိုင်)၁၆၇၈၈၇`
 
 *NOTE*
 
@@ -25,10 +25,10 @@ So you should be use six english characters for district.
 ### Get format
 
 ```js
-var nrc = MMNRC("12/OuKaMa (NAING) 123456");
+var nrc = MMNRC("12/Mayaka (NAING) 167887");
 
-nrc.getFormat() // 12/OUKAMA(N)123456
-nrc.getFormat("mm") // ၁၂/ဉကမ(နိုင်)၁၂၃၄၅၆
+nrc.getFormat() // 12/MAYAKA(N)167887
+nrc.getFormat("mm") // ၁၂/မရက(နိုင်)၁၆၇၈၈၇
 ```
 
 ### Test Equal
@@ -42,8 +42,8 @@ nrc.isEqual('၁၂/ဥကမ(နိုင်)၁၂၃၄၅၆') // return tru
 ### Get State name from nrc card
 
 ```js
-var nrc = MMNRC("14/PaPaNa(N)123456");
+var nrc = MMNRC("12/MAYAKA(N)167887");
 
-nrc.getState("mm") //ဧရာဝတီတိုင်း
-nrc.getState() // Ayeyarwaddy
+nrc.getState("mm") //ရန်ကုန်တိုင်း
+nrc.getState() // YANGON
 ```
